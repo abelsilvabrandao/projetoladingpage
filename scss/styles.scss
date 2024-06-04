@@ -1,0 +1,250 @@
+@import 'variables';
+
+// Resetando margens e paddings
+body, h1, p, ul, li, a, video, img {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+}
+
+// Fonte e cor de fundo principal
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+// Estilo do cabeçalho fixo no topo
+header {
+    background-color: #000;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+// Estilo do navbar
+.navbar {
+    background-color: #000 !important; // Defina a cor desejada para o navbar
+}
+
+// Container para limitar a largura do conteúdo
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+// Estilo do logotipo
+.marca img {
+    width: 100px;
+}
+
+// Estilo da barra de navegação
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #000;
+}
+
+// Estilo dos itens do menu
+nav ul li {
+    margin: 0 10px;
+    background-color: #000;
+}
+
+// Estilo dos links do menu
+nav ul li a {
+    text-decoration: none;
+    color: $white;
+    font-weight: 700;
+    background-color: $black;
+    position: relative;
+}
+
+/* Efeito hover para os links do menu */
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    background: yellow; /* Cor da linha amarela */
+    transition: width 0.3s;
+    bottom: -10px;
+    left: 0;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Troca de texto ao passar o mouse */
+nav ul li a:hover::before {
+    content: attr(data-hover);
+    position: absolute;
+    top: -10px;
+    left: 10%;
+    width: 100%;
+    height: 100%;
+    color: yellow;
+}
+
+// Estilo do menu mobile
+.menu-toggle {
+    background-color: $black;
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    background-color: yellow;
+    margin: 4px -5px;
+    width: 25px;
+    height: 3px;
+}
+
+// Ajustes para o layout mobile
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #000;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+    }
+    nav ul.showing {
+        display: flex;
+    }
+    .menu-toggle {
+        display: flex;
+    }
+}
+
+/* Estilo do carrossel */
+.carousel {
+    margin-top: 60px;
+}
+
+/* Altura do carrossel para desktop */
+.carousel-item {
+    height: 800px; /* Ajuste conforme necessário */    
+}
+
+.carousel-item img, .carousel-item video {
+    height: 100%;
+    object-fit: cover; /* Assegura que a imagem cubra todo o carrossel */
+}
+
+/* Altura do carrossel para dispositivos móveis */
+@media (max-width: 767px) {
+    .carousel-item {
+        height: 300px; /* Ajuste conforme necessário para dispositivos móveis */    
+    }
+
+    .carousel-item img, .carousel-item video {
+        height: 100%;
+        object-fit: cover;
+    }
+}
+/* Ocultar os botões de navegação por padrão */
+.carousel-control-prev,
+.carousel-control-next {
+    display: none;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    height: auto;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #fff;
+}
+
+/* Mostrar os botões de navegação ao passar o mouse sobre o carrossel */
+.carousel:hover .carousel-control-prev,
+.carousel:hover .carousel-control-next {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilos para os ícones dos botões */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px; /* Aumente o tamanho conforme necessário */
+    height: 120px; /* Aumente o tamanho conforme necessário */
+    color: #decb01; /* Cor dos ícones */
+    background: none;
+    font-size: 2.5em; /* Ajuste o tamanho do ícone */
+}
+
+/* Ajustes adicionais para garantir que os botões estejam corretos */
+.carousel-control-prev-icon {
+    background-image: none; /* Remover o fundo padrão */
+}
+
+.carousel-control-next-icon {
+    background-image: none; /* Remover o fundo padrão */
+}
+
+/* Ícones FontAwesome para os botões de navegação */
+.carousel-control-prev-icon::before {
+    content: '\f053'; /* Unicode do ícone "chevron-left" */
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+}
+
+.carousel-control-next-icon::before {
+    content: '\f054'; /* Unicode do ícone "chevron-right" */
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+}
+
+// Espaçamento entre as seções
+#sobre, #servicos, #portfolio, #clientes, #contato {
+    padding: 100px 0;
+}
+
+// Estilo dos títulos das seções
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+// Estilo dos parágrafos das seções
+p {
+    font-size: 1.2em;
+    line-height: 1.6em;
+}
+
+// Estilo do botão do WhatsApp
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.whatsapp svg {
+    fill: #fff;
+    width: 30px;
+    height: 30px;
+}
+

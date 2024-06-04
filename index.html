@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StreBackline</title>
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,700,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css"> <!-- Certifique-se de compilar o SCSS para CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="logo.png" alt="StreBackline" width="150">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="#inicio" data-hover="HOME">INÍCIO</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#sobre" data-hover="ABOUT">SOBRE</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#servicos" data-hover="SERVICES">SERVIÇOS</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#portfolio" data-hover="PORTFOLIO">PORTFÓLIO</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#clientes" data-hover="CLIENTS">CLIENTES</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contato" data-hover="CONTACT">CONTATO</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel" data-interval="4000">
+        <div class="carousel-indicators">
+            <button type="button" data-target="#carouselExampleCaptions" data-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-target="#carouselExampleCaptions" data-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-target="#carouselExampleCaptions" data-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="Eventosunhiser.png" class="d-block w-100 img-fluid" alt="videapresentacao">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Time STRE</h5>
+                    <p>Semana Audio - São Paulo</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="Eventosunhiser.png" class="d-block w-100 img-fluid" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Second slide label</h5>
+                    <p>Some representative placeholder content for the second slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <video class="d-block w-100 img-fluid" controls>
+                    <source src="video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Third slide label</h5>
+                    <p>Some representative placeholder content for the third slide.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-target="#carouselExampleCaptions" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true">
+                <i class="fas fa-chevron-left"></i>
+            </span>
+        </button>
+        <button class="carousel-control-next" type="button" data-target="#carouselExampleCaptions" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true">
+                <i class="fas fa-chevron-right"></i>
+            </span>
+        </button>
+    </div>
+
+    <div class="container" id="sobre">
+        <h1>Sobre</h1>
+        <p>Somos uma empresa especializada em aluguel de backline, oferecendo uma solução completa para eventos, incluindo fornecimento de equipamentos de alta qualidade, serviços especializados, logística eficiente e operação técnica. Nosso portfólio conta com uma vasta gama de equipamentos das marcas mais renomadas do mercado, como Sennheiser e Shure, entre outras.</p>
+        <p>Atuamos tanto no Brasil quanto no exterior, garantindo a excelência em eventos de grande porte. Nossa experiência e comprometimento asseguram a satisfação de nossos clientes em qualquer lugar do mundo.</p>
+    </div>
+
+    <div class="container" id="servicos">
+        <h1>Serviços</h1>
+        <p>Somos uma empresa especializada em aluguel de backline, oferecendo uma solução completa para eventos, incluindo fornecimento de equipamentos de alta qualidade, serviços especializados, logística eficiente e operação técnica. Nosso portfólio conta com uma vasta gama de equipamentos das marcas mais renomadas do mercado, como Sennheiser e Shure, entre outras.</p>
+        <p>Atuamos tanto no Brasil quanto no exterior, garantindo a excelência em eventos de grande porte. Nossa experiência e comprometimento asseguram a satisfação de nossos clientes em qualquer lugar do mundo.</p>
+    </div>
+    
+    <!-- GetButton.io widget -->
+    <script type="text/javascript">
+        (function() {
+            var options = {
+                whatsapp: "5571992880605",
+                call_to_action: "Olá, bem vindo à Strebackline! Em que podemos ajudar?",
+                button_color: "#FF6550",
+                position: "right",
+            };
+            var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;
+            var s = document.createElement('script');
+            s.type = 'text/javascript';
+            s.async = true;
+            s.src = url + '/widget-send-button/js/init.js';
+            s.onload = function() {
+                WhWidgetSendButton.init(host, proto, options);
+            };
+            var x = document.getElementsByTagName('script')[0];
+            x.parentNode.insertBefore(s, x);
+        })();
+    </script>
+    <!-- /GetButton.io widget -->
+
+    <script type="text/javascript" src="https://maximaproducoes.com.br/wp-includes/js/imagesloaded.min.js?ver=5.0.0" id="imagesloaded-js"></script>
+    <script type="text/javascript" src="https://maximaproducoes.com.br/wp-content/themes/oceanwp/assets/js/third/magnific-popup.min.js?ver=2.0.3" id="magnific-popup-js"></script>
+    <script type="text/javascript" src="https://maximaproducoes.com.br/wp-content/themes/oceanwp/assets/js/third/lightbox.min.js?ver=2.0.3" id="oceanwp-lightbox-js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+<footer id="footer" class="site-footer" itemscope="itemscope" itemtype="https://schema.org/WPFooter" role="contentinfo">
+    <div id="footer-inner" class="clr">
+        <div id="footer-bottom" class="clr no-footer-nav">
+            <div id="footer-bottom-inner" class="container clr">
+                <div id="copyright" class="clr" role="contentinfo">© 2018 - 2024 - Strebackline</div>
+            </div>
+        </div>
+    </div>
+</footer>
+</html>
+
